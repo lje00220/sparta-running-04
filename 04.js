@@ -10,7 +10,10 @@
  * @param {number} id
  * @returns {Array} 새로운 todos 배열
  */
-function deleteTodo(todos, id) {}
+function deleteTodo(todos, id) {
+  todos = todos.filter((x) => x.id !== id);
+  return todos;
+}
 
 // export 수정 불가
 export { deleteTodo };

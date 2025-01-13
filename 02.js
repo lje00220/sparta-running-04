@@ -12,7 +12,15 @@
  * @param {string} title
  * @returns {Array} 새로운 todos 배열
  */
-function createTodo(todos, title) {}
+function createTodo(todos, title) {
+  const newTodo = {
+    id: Date.now(),
+    title: title,
+    completed: false,
+  };
+  todos = [...todos, newTodo];
+  return todos;
+}
 
 // export 수정 불가
 export { createTodo };

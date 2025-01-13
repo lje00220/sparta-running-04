@@ -8,7 +8,9 @@
  * @param {Array} todos
  * @returns {Array}
  */
-function getIncompleteTodos(todos) {}
+function getIncompleteTodos(todos) {
+  return todos.filter((x) => x["completed"] === false);
+}
 
 // export 수정 불가
 export { getIncompleteTodos };
