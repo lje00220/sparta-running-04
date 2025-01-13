@@ -1,0 +1,35 @@
+{
+  "name": "javascript-run-04",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "cross-env husky",
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest",
+    "check": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --json --outputFile=test-results.json || true",
+    "open": "cross-env node scripts/openTestReport.js",
+    "check:open": "npm run check && npm run open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "type": "module",
+  "transform": {
+    "^.+\\.js$": "babel-jest",
+    "^.+\\.mjs$": "babel-jest"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "babel-jest": "^29.7.0",
+    "husky": "^9.1.7",
+    "jest": "^29.7.0"
+  },
+  "dependencies": {
+    "@octokit/rest": "^21.1.0",
+    "cross-env": "7.0.3",
+    "dotenv": "^16.4.7",
+    "jest-html-reporters": "^3.1.7",
+    "open": "^10.1.0"
+  }
+}
