@@ -16,9 +16,10 @@
 function filterUserTodos(userTodos, userId, priority) {
   const titles = userTodos
     .filter(
-      (x) => x.id === userId && x.priority === priority && x.completed === false
+      (x) =>
+        x.userId === userId && x.priority === priority && x.completed === false
     )
-    .map((x) => titles.push(x.title));
+    .map((x) => x.title);
 
   return titles;
 }
