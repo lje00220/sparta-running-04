@@ -15,7 +15,9 @@ async function filterTodosByKeyword(keyword) {
   const res = await fetch("https://jsonplaceholder.typicode.com/todos");
   const todos = await res.json();
 
-  const filteredTodo = todos.filter((x) => x.title.includes(keyword));
+  const filteredTodo = todos.filter((x) =>
+    x.title.toUpperCase().includes(keyword.toUpperCase())
+  );
   return filteredTodo;
 }
 

@@ -14,6 +14,9 @@
 async function extractNames(url) {
   const res = await fetch(url);
   const arr = await res.json();
+  console.log(arr);
+
+  return arr.result.records.map((x) => x.detail.name);
 }
 
 // export 수정 불가

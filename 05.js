@@ -20,7 +20,6 @@ function filterUserTodos(userTodos, userId, priority) {
         x.userId === userId && x.priority === priority && x.completed === false
     )
     .map((x) => x.title);
-
   return titles;
 }
 
